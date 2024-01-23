@@ -54,7 +54,7 @@ const Header = ({ title }) => {
           borderRadius: 50,
           backgroundColor: 'white',
           padding: 5,
-          marginRight: 15, // Thêm khoảng cách từ Icon đến mép phải của Header
+          marginRight: 15,
         }}
       />
       </TouchableOpacity>

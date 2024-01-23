@@ -4,7 +4,7 @@ import HomeScreen from '../screens/HomeScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import Cart from '../screens/Cart';
 import MenuScreen from '../screens/MenuScreen';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/Ionicons'; // Import biểu tượng từ thư viện Ionicons
 import { createStackNavigator } from '@react-navigation/stack';
 import Detail from '../screens/Detail';
 import Favorite from '../screens/Favorite';
@@ -34,10 +34,10 @@ const Menu = () => {
     >
       <Tab.Screen
         name="HomeTab"
-        component={HomeStack}  // Sử dụng HomeStack thay vì HomeScreen
+        component={HomeStack}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon name="home" size={35} color={color} />
+            <Icon name="home-outline" size={35} color={color} /> // Thay đổi biểu tượng home
           ),
           tabBarLabel: 'Home',
         }}
@@ -47,7 +47,7 @@ const Menu = () => {
         component={MenuScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon name="bell-outline" size={35} color={color} />
+            <Icon name="notifications-outline" size={35} color={color} /> // Thay đổi biểu tượng alert
           ),
           tabBarLabel: 'Alert',
         }}
@@ -57,7 +57,7 @@ const Menu = () => {
         component={Favorite}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon name="heart-outline" size={35} color={color} />
+            <Icon name="heart-outline" size={35} color={color} /> // Biểu tượng favorite giữ nguyên
           ),
           tabBarLabel: 'Favorite',
         }}
@@ -67,7 +67,7 @@ const Menu = () => {
         component={ProfileScreen}
         options={{
           tabBarIcon: ({ color }) => (
-            <Icon name="account-outline" size={35} color={color} />
+            <Icon name="person-outline" size={35} color={color} /> // Thay đổi biểu tượng profile
           ),
           tabBarLabel: 'Profile',
         }}
